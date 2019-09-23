@@ -3,7 +3,14 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  apiKey: "AIzaSyAjuCbfLoHjFtVIiQO_OhlqNWOjVVKOiWE",
+  authDomain: "dashboard-imie-fb838.firebaseapp.com",
+  databaseURL: "https://dashboard-imie-fb838.firebaseio.com",
+  projectId: "dashboard-imie-fb838",
+  storageBucket: "",
+  messagingSenderId: "113241854408",
+  appId: "1:113241854408:web:95f3c943f388a5581b30fd"
 };
 
 /*
