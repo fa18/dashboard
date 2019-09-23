@@ -1,7 +1,5 @@
-<div>
-  <form action="">
-    <input type="email" name="login" [(ngModel)]='user.login'>
-    <input type="password" name="password" [(ngModel)]='user.password'>
-    <input type="submit" name="S'inscrire" (click)="submitForm()" >
-  </form>
-</div>
+<h1>Se connecter</h1>
+<app-form-user></app-form-user>
+
+<br/>
+Pas encore inscrit ? <a routerLink="/register">Inscrivez vous dès maintenant</a>

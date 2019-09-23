@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser'
-import { NgModule } from '@angular/core'
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module'
 import { AppComponent } from './app.component'
@@ -11,12 +11,14 @@ import { environment} from './../environments/environment'
 import { RegisterComponent } from './@pages/register/register.component'
 import { FirebaseAuthService} from './providers/firebase-auth.service'
 import { LoginComponent } from './@pages/login/login.component'
+import { FormUserComponent } from './@pages/formUser/formUser.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     RegisterComponent,
-    LoginComponent
+    LoginComponent,
+    FormUserComponent
   ],
   imports: [
     BrowserModule,
@@ -24,8 +26,9 @@ import { LoginComponent } from './@pages/login/login.component'
     AngularFireModule.initializeApp(environment),
     AngularFireAuthModule,
     FormsModule,
-
-
+  ],
+  schemas: [
+    CUSTOM_ELEMENTS_SCHEMA
   ],
   providers: [FirebaseAuthService],
   bootstrap: [AppComponent]
