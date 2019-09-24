@@ -18,20 +18,25 @@ export class FirebaseAuthService {
   signUp(email: string, password: string){
     this.authFire.auth.createUserWithEmailAndPassword(email, password)
     .then(response => {
-      console.log(response)
+      alert("Inscription réussie")
     })
     .catch(error => {
-      console.log("Error:"+error)
+      alert(error)
     })
   }
 
+  /**
+   * Login with email and password
+   * @param email: String
+   * @param password: String
+   */
   signIn(email: string, password: string){
     this.authFire.auth.signInWithEmailAndPassword(email, password)
       .then(response => {
-        console.log(response)
+        alert("Connexion réussie")
       })
       .catch(error => {
-        console.log("Error:"+error)
+        alert(error)
       })
   }
 
