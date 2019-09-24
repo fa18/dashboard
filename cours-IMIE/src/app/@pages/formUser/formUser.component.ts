@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core'
+import {Component, Input, OnInit} from '@angular/core'
 import { FirebaseAuthService } from '../../providers/firebase-auth.service'
 
 @Component({
@@ -8,13 +8,13 @@ import { FirebaseAuthService } from '../../providers/firebase-auth.service'
 })
 export class FormUserComponent implements OnInit {
 
-  user = { login: '', password: ''}
+  @Input() param: any;
 
-  constructor(private firebaseAuth: FirebaseAuthService) {}
+  constructor(public firebaseAuth: FirebaseAuthService) {}
 
-  submitForm() {
-    this.firebaseAuth.signUp(this.user.login, this.user.password)
-  }
+  // submitForm() {
+  //   this.firebaseAuth.signUp(this.user.login, this.user.password)
+  // }
 
   ngOnInit() {
   }
