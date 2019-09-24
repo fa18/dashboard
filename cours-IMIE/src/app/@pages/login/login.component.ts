@@ -11,7 +11,7 @@ import {FormUserComponent} from '../formUser/formUser.component'
 export class LoginComponent implements OnInit {
 
   user = { login: '', password: '', button: () => {
-      // this.form.firebaseAuth.signUp(this.user.login, this.user.password)
+      this.firebaseAuth.signIn(this.user.login, this.user.password)
     }}
 
   constructor(public firebaseAuth: FirebaseAuthService) {}

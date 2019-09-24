@@ -25,4 +25,14 @@ export class FirebaseAuthService {
     })
   }
 
+  signIn(email: string, password: string){
+    this.authFire.auth.signInWithEmailAndPassword(email, password)
+      .then(response => {
+        console.log(response)
+      })
+      .catch(error => {
+        console.log("Error:"+error)
+      })
+  }
+
 }
